@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" integrity="sha512-DJLNx+VLY4aEiEQFjiawXaiceujj5GA7lIY8CHCIGQCBPfsEG0nGz1edb4Jvw1LR7q031zS5PpPqFuPA8ihlRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<style>
+
+    .we-offer-area .our-offer-carousel .owl-dots .owl-dot span {
+    background: #ffffff none repeat scroll 0 0;
+    border: 2px solid;
+    height: 15px;
+    margin: 0 5px;
+    width: 15px;
+    }
+    
+    .we-offer-area .our-offer-carousel .owl-dots .owl-dot.active span {
+    background: #00a01d none repeat scroll 0 0;
+    border-color: #00a01d;
+    }
+    
+    .we-offer-area .item {
+    background: #ffffff none repeat scroll 0 0;
+    border-left: 2px solid #00a01d;
+    -moz-box-shadow: 0 0 10px #cccccc;
+    -webkit-box-shadow: 0 0 10px #cccccc;
+    -o-box-shadow: 0 0 10px #cccccc;
+    box-shadow: 0 0 10px #cccccc;
+    overflow: hidden;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    }
+    
+    .we-offer-area.text-center .item {
+    background: #ffffff none repeat scroll 0 0;
+    border: medium none;
+    padding: 67px 40px 64px;
+    }
+    
+    .we-offer-area.text-center .item i {
+    background:#564ff1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 40px;
+    height: 80px;
+    line-height: 80px;
+    position: relative;
+    text-align: center;
+    width: 80px;
+    z-index: 1;
+    transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    margin-bottom: 25px;
+    }
+    
+    .we-offer-area.text-center .item i::after {
+    border: 2px solid #564ff1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    content: "";
+    height: 90px;
+    left: -5px;
+    position: absolute;
+    top: -5px;
+    width: 90px;
+    z-index: -1;
+    transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    }
+    
+    .we-offer-area.item-border-less .item {
+    border: medium none;
+    }
+    
+    .we-offer-area .our-offer-items.less-carousel .equal-height {
+    margin-bottom: 30px;
+    }
+    
+    .we-offer-area.item-border-less .item .number {
+    font-family: "Poppins",sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    opacity: 0.1;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    }
+    
+    .our-offer-carousel.center-active .owl-item:nth-child(2n) .item,
+    .we-offer-area.center-active .single-item:nth-child(2n) .item {
+    background: #00a01d none repeat scroll 0 0;
+    }
+    
+    .our-offer-carousel.center-active .owl-item:nth-child(2n) .item i,
+    .our-offer-carousel.center-active .owl-item:nth-child(2n) .item h4,
+    .our-offer-carousel.center-active .owl-item:nth-child(2n) .item p,
+    .we-offer-area.center-active .single-item:nth-child(2n) .item i,
+    .we-offer-area.center-active .single-item:nth-child(2n) .item h4,
+    .we-offer-area.center-active .single-item:nth-child(2n) .item p {
+    color: #ffffff;
+    }
+    
+    .we-offer-area .item i {
+    color: #22d3a4;
+    display: inline-block;
+    font-size: 60px;
+    margin-bottom: 20px;
+    }
+    
+    .we-offer-area .item h4 {
+    font-weight: 600;
+    text-transform: capitalize;
+    }
+    
+    .we-offer-area .item p {
+    margin: 0;
+    }
+    
+    .we-offer-area .item i,
+    .we-offer-area .item h4,
+    .we-offer-area .item p {
+    transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    }
+ .we-offer-area .item::after {
+    background: rgb(34,211,164);
+    background: linear-gradient(90deg, rgba(34,211,164,1) 0%, rgba(65,135,210,0.9669117647058824) 56%, rgba(86,79,241,0.9220938375350141) 100%);content: "";
+    height: 100%;
+    left: -100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    width: 100%;
+    z-index: -1;
+    }
+    
+    .we-offer-area .item:hover::after {
+    left: 0;
+    }
+    
+    .we-offer-area .item:hover i,
+    .we-offer-area .item:hover h4,
+    .we-offer-area .item:hover p {
+    color: #ffffff !important;
+    }
+    
+    .we-offer-area.text-center .item:hover i::after {
+    border-color: #564ff1!important;
+    }
+    
+    .we-offer-area.text-center .item:hover i {
+    background-color: #564ff1!important;
+    color: #ffff
+    !important;
+    }
+    
+    .we-offer-area.text-left .item i {
+    background:#22d3a4;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 60px;
+    height: 100px;
+    line-height: 100px;
+    margin-bottom: 30px;
+    position: relative;
+    width: 100px;
+    z-index: 1;
+    text-align: center;
+    }
+    
+    .we-offer-area.text-left .item i::after {
+    border: 2px solid #00a01d;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    content: "";
+    height: 120px;
+    left: -10px;
+    position: absolute;
+    top: -10px;
+    width: 120px;
+    }
+</style>
+<body>
+    <section class="we-offer-area text-center bg-gray">
+        <div class="container">           
+                <div class="row our-offer-items less-carousel ">
+                    <!-- Single Item 1 -->
+
+                    <div class="col-12 col-md-6 col-lg-4 equal-height ">
+                        <div class="item">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <h4>Web Development</h4>
+                            <p>
+                                Web involves creating and maintaining websites, 
+                                encompassing web design, web programming, and database management.</p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+    
+                    <!-- Single Item 2 -->
+                    <div class="col-12 col-md-6 col-lg-4 equal-height ">
+                        <div class="item">
+                            
+                            <i class="fa-brands fa-wordpress-simple"></i>
+                            <h4>WordPress</h4>
+                            <p>
+                                WordPress is a popular CMS, open-source content management system
+                                 for creating and managing websites and blogs easily.</p>
+                        </div>
+                    </div>
+   
+                    <!-- End Single Item -->
+
+                    <!-- Single Item 3 -->
+                    <div class="col-12 col-md-6 col-lg-4 equal-height ">
+                        <div class="item">
+                            
+                            <i class="fa-brands fa-elementor"></i>
+                            <h4>Elementor</h4>
+                            <p>
+                                Elementor is a popular drag-and-drop page builder 
+                                plugin for WordPress, used to create and design websites visually.</p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+    
+                    <!-- Single Item 4 -->
+                    <div class="col-12 col-md-6 col-lg-4 equal-height ">
+                        <div class="item">
+                            
+                            <i class="bi bi-megaphone"></i>
+                            <h4>Degital Marketing</h4>
+                            <p>
+                                Digital marketing utilizes online platforms like websites, social media,
+                                 and search engines to reach and engage with target audiences.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+
+                                            <!-- Single Item 5 -->
+                                            <div class="col-12 col-md-6 col-lg-4 equal-height ">
+                                                <div class="item">
+                                                    
+                                                    <i class="bi bi-pen-fill"></i>
+                                                    <h4>Content Writing</h4>
+                                                    <p>
+                                                    
+                                                        Content writing involves creating engaging and informative text 
+                                                        for various mediums like websites, blogs, and social media.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- End Single Item -->
+                                        <!-- Single Item 6 -->
+                                        <div class="col-12 col-md-6 col-lg-4 equal-height ">
+                                            <div class="item">
+                                                
+                                                <i class="bi bi-google"></i>
+                                                <h4>  SEO </h4>
+                                                <p>
+                                                    SEO (Search Engine Optimization) involves optimizing
+                                                     websites to increase visibility and rank higher in search engine results.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Item -->                         
+               </div>
+        </div>
+    </section>
+
+</body>
+</html>
